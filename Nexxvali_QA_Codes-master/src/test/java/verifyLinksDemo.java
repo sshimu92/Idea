@@ -37,7 +37,6 @@ public class verifyLinksDemo {
             URL url = new URL(linkUrl);
             HttpURLConnection httpURLConnect = (HttpURLConnection) url.openConnection();
             httpURLConnect.setConnectTimeout(3000);
-
             httpURLConnect.connect();
 
             if (httpURLConnect.getResponseCode() == 200) {

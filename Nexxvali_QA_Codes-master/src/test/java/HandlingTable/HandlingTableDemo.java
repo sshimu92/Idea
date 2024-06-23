@@ -20,9 +20,10 @@ public class HandlingTableDemo {
         List<WebElement> dates =  driver.findElements(By.xpath("//table[@class='ui-datepicker-calendar']//td"));
 
         int total_nodes = dates.size();
+        System.out.println("Total nodes: " + total_nodes);
         for(int i=0; i<total_nodes; i++) {
             String date = dates.get(i).getText();
-            if(date.equalsIgnoreCase("25")) {
+            if(date.equalsIgnoreCase("20")) {
                 dates.get(i).click();
                 break;
             }
